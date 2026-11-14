@@ -92,7 +92,8 @@ export function buildPrompt(img, art = loadArtDirection()) {
           else missingReferences.push(refId);
         }
       }
-      return `${ref.name} — ${c.description}. Appearance (keep identical to the attached reference images): ${ref.age}; ${ref.face}; hair: ${ref.hair}; build: ${ref.build}; clothing: ${ref.clothing}. ${ref.notes}`;
+      const own = img.character === c.characterRef;
+      return `${ref.name} — ${c.description}. Appearance${own ? '' : ' (keep identical to the attached reference images)'}: ${ref.age}; ${ref.face}; hair: ${ref.hair}; build: ${ref.build}; clothing: ${ref.clothing}. ${ref.notes}`;
     });
     lines.push(`CHARACTERS: ${people.join(' | ')}`);
   }
