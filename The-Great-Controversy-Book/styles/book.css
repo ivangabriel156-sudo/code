@@ -1,0 +1,278 @@
+/* ==========================================================================
+   The Great Controversy — Illustrated Study Edition
+   Book stylesheet: burgundy & cream identity, large-print typography.
+   All sizes are in pt / mm so that what you set is what prints on A4.
+   ========================================================================== */
+
+@font-face { font-family: "Source Serif 4"; font-weight: 400; font-style: normal; src: url("../assets/fonts/source-serif-4-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 400; font-style: italic; src: url("../assets/fonts/source-serif-4-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 600; font-style: normal; src: url("../assets/fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 600; font-style: italic; src: url("../assets/fonts/source-serif-4-latin-600-italic.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 700; font-style: normal; src: url("../assets/fonts/source-serif-4-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 700; font-style: italic; src: url("../assets/fonts/source-serif-4-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 500; font-style: normal; src: url("../assets/fonts/playfair-display-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 500; font-style: italic; src: url("../assets/fonts/playfair-display-latin-500-italic.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: normal; src: url("../assets/fonts/playfair-display-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: italic; src: url("../assets/fonts/playfair-display-latin-700-italic.woff2") format("woff2"); }
+
+:root {
+  /* Palette */
+  --burgundy: #6b1325;
+  --burgundy-deep: #4a0c19;
+  --cream: #f8f1e3;
+  --cream-light: #fdf9f0;
+  --beige: #ecdfc6;
+  --beige-deep: #dcc9a6;
+  --gold: #b48a35;
+  --gold-light: #d6b871;
+  --ink: #26170f;
+
+  /* Typography (elderly-reader scale — do not reduce) */
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --size-body: 18pt;
+  --size-title: 36pt;
+  --size-section: 28pt;
+  --size-sub: 22pt;
+  --size-verse: 19pt;
+  --size-caption: 14pt;
+  --size-furniture: 12pt;
+
+  /* Page geometry */
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin-x: 21mm;
+  --margin-top: 27mm;
+  --margin-bottom: 25mm;
+}
+
+@page { size: 210mm 297mm; margin: 0; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: 1.5;
+  color: var(--ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-kerning: normal;
+}
+#source { display: none; }
+
+/* ----------------------------------------------------------------- Pages */
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+  break-after: page;
+  break-inside: avoid;
+}
+.page:last-child { break-after: auto; }
+
+.page-header {
+  position: absolute; top: 11mm; left: var(--margin-x); right: var(--margin-x);
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: var(--size-furniture); line-height: 1.2;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--burgundy); font-weight: 600;
+  padding-bottom: 2mm; border-bottom: 0.5mm solid var(--gold);
+}
+.page-footer {
+  position: absolute; bottom: 9mm; left: var(--margin-x); right: var(--margin-x);
+  display: flex; align-items: center; justify-content: center; gap: 4mm;
+  font-size: 15pt; line-height: 1; color: var(--burgundy); font-weight: 600;
+}
+.page-footer::before, .page-footer::after {
+  content: ""; flex: 1; height: 0.35mm; background: var(--gold);
+}
+.page-footer .draft-flag {
+  font-size: var(--size-furniture); letter-spacing: 0.08em; text-transform: uppercase;
+  border: 0.35mm solid var(--burgundy); padding: 1mm 2.5mm; border-radius: 1mm;
+}
+.page-body {
+  position: absolute;
+  top: var(--margin-top); bottom: var(--margin-bottom);
+  left: var(--margin-x); right: var(--margin-x);
+  overflow: hidden;
+}
+
+/* Template variations — same brand, different page character */
+.page--history { background: var(--beige); }
+.page--history::before {                     /* burgundy top band */
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 6mm; background: var(--burgundy);
+}
+.page--bible { background: var(--cream-light); }
+.page--bible::before {                       /* burgundy spine with gold edge */
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 9mm;
+  background: var(--burgundy); border-right: 1mm solid var(--gold);
+}
+.page--visual { background: var(--cream-light); }
+.page--reflection::before {                  /* fine double gold frame */
+  content: ""; position: absolute; inset: 6mm;
+  border: 0.5mm solid var(--gold); outline: 0.25mm solid var(--gold-light); outline-offset: 1.2mm;
+  pointer-events: none;
+}
+.page--guide { background: var(--beige); }
+
+/* ------------------------------------------------------------ Typography */
+.block { margin: 0 0 5.5mm 0; }
+.block:last-child { margin-bottom: 0; }
+
+p.block { font-size: var(--size-body); line-height: 1.52; margin-bottom: 5mm; hyphens: none; }
+p.lead { font-size: 19pt; }
+p.lead::first-letter {
+  font-family: var(--font-display); font-weight: 700; color: var(--burgundy);
+  font-size: 58pt; line-height: 0.8; float: left; padding: 2.2mm 2.5mm 0 0;
+}
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+.section-head { margin-bottom: 7mm; }
+.section-head .kicker {
+  font-size: 14pt; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--burgundy); font-weight: 600; line-height: 1.2; margin-bottom: 1.5mm;
+}
+.section-title {
+  font-family: var(--font-display); font-weight: 700; color: var(--burgundy);
+  font-size: var(--size-section); line-height: 1.15; margin: 0;
+}
+.ornament { display: flex; align-items: center; gap: 3mm; margin-top: 3.5mm; }
+.ornament::before, .ornament::after { content: ""; height: 0.5mm; background: var(--gold); flex: 1; }
+.ornament::before { flex: 0 0 28mm; }
+.ornament span { width: 2.6mm; height: 2.6mm; background: var(--gold); transform: rotate(45deg); flex: none; }
+
+h3.sub {
+  font-family: var(--font-display); font-weight: 700; color: var(--burgundy);
+  font-size: var(--size-sub); line-height: 1.2; margin: 2mm 0 3.5mm 0;
+}
+
+.chip {
+  display: inline-block; font-size: 12.5pt; font-weight: 700; line-height: 1.2;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 1.2mm 3mm; border-radius: 1mm; margin-bottom: 3mm;
+  background: var(--burgundy); color: var(--cream-light);
+}
+.chip--history { background: var(--ink); }
+.chip--egw { background: var(--cream-light); color: var(--burgundy); border: 0.4mm solid var(--burgundy); }
+.chip--note { background: var(--gold-light); color: var(--ink); }
+
+/* ---------------------------------------------------------------- Images */
+figure { margin: 0; }
+.illus img { display: block; width: 100%; object-fit: cover; border: 0.6mm solid var(--gold); }
+.illus--hero img, .illus--hero .img-placeholder { height: 96mm; }
+.illus--wide img, .illus--wide .img-placeholder { height: 72mm; }
+.illus figcaption, .svg-figure figcaption {
+  font-size: var(--size-caption); line-height: 1.35; font-style: italic;
+  color: var(--burgundy-deep); margin-top: 2.2mm; text-align: center;
+}
+/* Honest placeholder: shown only in draft builds when an illustration has not been generated. */
+.img-placeholder {
+  width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 8mm 12mm; gap: 3mm;
+  background:
+    repeating-linear-gradient(135deg, rgba(180,138,53,0.10) 0 4mm, transparent 4mm 8mm),
+    var(--beige);
+  border: 0.6mm dashed var(--gold); color: var(--burgundy-deep);
+}
+.img-placeholder .ph-label { font-size: 13pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.2; }
+.img-placeholder .ph-desc { font-size: 14pt; line-height: 1.35; font-style: italic; }
+.img-placeholder .ph-file { font-size: 12pt; line-height: 1.2; font-family: var(--font-body); opacity: 0.85; }
+
+.svg-figure svg { display: block; width: 100%; height: auto; }
+
+/* ---------------------------------------------------------------- Panels */
+.panel { padding: 5.5mm 6.5mm 6mm; border-radius: 1.5mm; }
+.panel h4 {
+  font-family: var(--font-display); font-weight: 700; color: var(--burgundy);
+  font-size: 21pt; line-height: 1.2; margin: 0 0 2.5mm 0;
+}
+.panel p { margin: 0 0 3.5mm 0; font-size: var(--size-body); line-height: 1.5; }
+.panel p:last-child { margin-bottom: 0; }
+.panel--history { background: var(--cream-light); border-top: 1.4mm solid var(--burgundy); box-shadow: inset 0 0 0 0.3mm var(--beige-deep); }
+.page--history .panel--history { background: var(--cream-light); }
+.panel--egw { background: var(--cream-light); border-left: 1.8mm solid var(--gold); box-shadow: inset 0 0 0 0.3mm var(--beige-deep); }
+.panel--note { background: var(--beige); border: 0.4mm solid var(--gold); }
+.page--history .panel--note, .page--guide .panel--note { background: var(--cream-light); }
+.panel--apply { background: var(--burgundy); color: var(--cream-light); }
+.panel--apply h4 { color: var(--gold-light); }
+.panel--apply .chip { background: var(--gold-light); color: var(--ink); }
+
+/* ----------------------------------------------------------- Bible verse */
+.verse {
+  position: relative; background: #fffdf7; padding: 6mm 7mm 5.5mm 9mm;
+  border-left: 2mm solid var(--burgundy); border-radius: 0 1.5mm 1.5mm 0;
+  box-shadow: inset 0 0 0 0.3mm var(--gold-light);
+}
+.verse-text {
+  margin: 0; font-size: var(--size-verse); line-height: 1.5; font-style: italic; color: var(--ink);
+}
+.verse-ref {
+  margin-top: 3mm; font-size: 17pt; line-height: 1.2; font-weight: 700; font-style: normal;
+  color: var(--burgundy); letter-spacing: 0.04em; text-align: right;
+}
+
+/* -------------------------------------------------------------- Timeline */
+.tl-item { display: grid; grid-template-columns: 38mm 1fr; column-gap: 6mm; margin-bottom: 0; position: relative; padding-bottom: 5.5mm; }
+.tl-item::before {                             /* the gold thread joining the dates */
+  content: ""; position: absolute; left: 19mm; top: 0; bottom: 0; width: 0.7mm; background: var(--gold); transform: translateX(-50%);
+}
+.tl-date {
+  position: relative; align-self: start; text-align: center;
+  background: var(--burgundy); color: var(--cream-light);
+  font-weight: 700; font-size: 17pt; line-height: 1.15;
+  padding: 2.4mm 1.5mm; border-radius: 1.5mm; border: 0.5mm solid var(--gold);
+}
+.tl-body h4 { font-family: var(--font-display); font-weight: 700; color: var(--burgundy); font-size: 21pt; line-height: 1.2; margin: 0.6mm 0 1.5mm 0; }
+.tl-body p { margin: 0; font-size: var(--size-body); line-height: 1.45; }
+
+/* ---------------------------------------------------------------- People */
+.person { display: grid; grid-template-columns: 24mm 1fr; column-gap: 6mm; align-items: start;
+  background: var(--cream-light); padding: 5mm 6mm; border-radius: 1.5mm; box-shadow: inset 0 0 0 0.3mm var(--beige-deep); }
+.person .monogram {
+  width: 24mm; height: 24mm; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: var(--burgundy); color: var(--gold-light); border: 0.8mm solid var(--gold);
+  font-family: var(--font-display); font-weight: 700; font-size: 30pt; line-height: 1;
+}
+.person h4 { font-family: var(--font-display); font-weight: 700; color: var(--burgundy); font-size: 21pt; line-height: 1.2; margin: 0; }
+.person .role { font-size: 15pt; line-height: 1.3; font-style: italic; color: var(--burgundy-deep); margin: 0.5mm 0 2mm; }
+.person p.bio { margin: 0; font-size: var(--size-body); line-height: 1.45; }
+
+/* ------------------------------------------------ Lessons and questions */
+.numbered { display: grid; grid-template-columns: 15mm 1fr; column-gap: 5mm; align-items: start; }
+.numbered .num {
+  width: 15mm; height: 15mm; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 21pt; line-height: 1;
+  background: var(--burgundy); color: var(--cream-light); border: 0.6mm solid var(--gold);
+}
+.numbered--question .num { background: var(--cream-light); color: var(--burgundy); border: 0.7mm solid var(--burgundy); }
+.numbered h4 { font-family: var(--font-display); font-weight: 700; color: var(--burgundy); font-size: 21pt; line-height: 1.2; margin: 1.5mm 0 1.5mm; }
+.numbered p { margin: 0; font-size: var(--size-body); line-height: 1.48; }
+.numbered--question p { padding-top: 2mm; }
+
+/* ---------------------------------------------------------------- Legend */
+.legend-row { display: grid; grid-template-columns: 62mm 1fr; column-gap: 5mm; align-items: start; margin-bottom: 4mm; }
+.legend-row .chip { margin: 0.8mm 0 0; text-align: center; }
+.legend-row p { margin: 0; font-size: var(--size-body); line-height: 1.42; }
+.parts-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 8mm; }
+.parts-list div { font-size: var(--size-body); line-height: 1.35; }
+.parts-list b { color: var(--burgundy); font-family: var(--font-display); margin-right: 2mm; }
+
+/* ----------------------------------------------------------------- Cover */
+.page--cover { background: var(--cream); }
+.cover-art { position: absolute; top: 0; left: 0; right: 0; height: 168mm; }
+.cover-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover-art .img-placeholder { height: 100%; border-width: 0 0 0.6mm 0; }
+.cover-band { position: absolute; top: 168mm; left: 0; right: 0; height: 3mm; background: var(--burgundy); border-top: 0.8mm solid var(--gold); border-bottom: 0.8mm solid var(--gold); }
+.cover-text { position: absolute; top: 179mm; bottom: 20mm; left: 24mm; right: 24mm; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.cover-chapter { font-size: 17pt; letter-spacing: 0.3em; text-transform: uppercase; color: var(--burgundy); font-weight: 600; line-height: 1.2; }
+.cover-title { font-family: var(--font-display); font-weight: 700; font-size: var(--size-title); line-height: 1.12; color: var(--burgundy); margin: 4mm 0 0; }
+.cover-text .ornament { width: 90mm; margin: 5mm 0; }
+.cover-text .ornament::before { flex: 1; }
+.cover-subtitle { font-size: 21pt; line-height: 1.35; font-style: italic; color: var(--ink); margin: 0; }
+.cover-verse { margin-top: auto; font-size: 18pt; line-height: 1.4; font-style: italic; color: var(--burgundy-deep); }
+.cover-verse b { display: block; font-style: normal; font-size: 17pt; letter-spacing: 0.06em; margin-top: 1.5mm; color: var(--burgundy); }
+.cover-series { position: absolute; bottom: 9mm; left: 0; right: 0; text-align: center; font-size: var(--size-furniture); letter-spacing: 0.14em; text-transform: uppercase; color: var(--burgundy); font-weight: 600; }

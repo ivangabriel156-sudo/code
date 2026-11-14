@@ -1,0 +1,5 @@
+{
+  "defaultModel": "gpt-image-1",
+  "style": "A cinematic historical painting in the tradition of nineteenth-century academic realism, made as an illustration for a Christian educational book. Realistic, historically appropriate clothing, architecture and landscape for the period and place shown. Warm golden light, rich earth tones with deep burgundy and cream accents, detailed environment, clear focal point, dignified and reverent mood, beautiful balanced composition, painterly oil-on-canvas texture.",
+  "avoid": "No text, captions, lettering, borders, frames, signatures or watermarks anywhere in the image. No modern objects. No graphic gore; suffering is suggested with restraint. Faces are natural and respectful, with Middle Eastern features where the setting is the ancient Near East."
+}

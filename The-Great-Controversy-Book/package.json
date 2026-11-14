@@ -1,0 +1,18 @@
+{
+  "name": "the-great-controversy-book",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Automated production system for a large-print illustrated study edition of The Great Controversy.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "images": "node scripts/generate-images.mjs",
+    "chapter1:draft": "node scripts/build.mjs 1 --draft --preview"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "playwright": ">=1.40"
+  }
+}

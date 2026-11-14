@@ -1,0 +1,687 @@
+{
+  "number": 1,
+  "title": "Destruction of Jerusalem",
+  "status": "DRAFT — educational text written before a verified public-domain 1888 source was supplied. Every statement marked as Ellen White's view must be checked against that source before approval.",
+  "startPage": 1,
+  "cover": {
+    "image": "cover",
+    "subtitle": "Jesus weeps over a city He loved, and warns the world of what is to come",
+    "verse": {
+      "text": "And when he was come near, he beheld the city, and wept over it.",
+      "ref": "Luke 19:41"
+    }
+  },
+  "images": [
+    {
+      "id": "cover",
+      "file": "cover-jesus-weeping-over-jerusalem.png",
+      "aspect": "landscape",
+      "alt": "Jesus on the Mount of Olives, weeping as He looks across the valley at Jerusalem and its Temple at sunset",
+      "prompt": "Jesus of Nazareth standing on the slope of the Mount of Olives in the late afternoon, seen partly from behind and to the side, in a simple first-century robe, his face full of sorrow and tears. Across the Kidron Valley lies Jerusalem about AD 31: the great white-and-gold Temple of Herod on its platform, the city walls and towers glowing in golden sunset light. A crowd with palm branches stands quiet and puzzled behind him. Olive trees in the foreground."
+    },
+    {
+      "id": "temple",
+      "file": "herods-temple-in-morning-light.png",
+      "aspect": "landscape",
+      "alt": "Herod’s Temple in Jerusalem, white marble and gold shining in the morning sun",
+      "prompt": "The Temple of Herod in Jerusalem in the first century, viewed from the outer court: tall white marble sanctuary with gold decoration shining in early morning sun, wide stone courts, colonnades, worshippers in first-century Judean clothing walking up broad steps."
+    },
+    {
+      "id": "stones",
+      "file": "disciples-and-the-temple-stones.png",
+      "aspect": "landscape",
+      "alt": "The disciples point to the huge stones of the Temple while Jesus looks on with sadness",
+      "prompt": "Jesus and several of his disciples leaving the Temple in Jerusalem, first century. The disciples point up with admiration at the enormous, finely cut limestone blocks of the Temple walls, while Jesus looks at the building with quiet sadness. Warm afternoon light, long shadows across the stone pavement."
+    },
+    {
+      "id": "pella",
+      "file": "christians-fleeing-to-pella.png",
+      "aspect": "landscape",
+      "alt": "Christian families leave Jerusalem and walk toward the hills beyond the Jordan",
+      "prompt": "Families of early Christians in AD 66 walking away from Jerusalem along a dusty road toward distant hills: men, women, children and elderly people carrying bundles, a donkey with baggage, a mother holding a child's hand. The walls of Jerusalem are small in the background under a dramatic early morning sky. The mood is urgent but hopeful."
+    },
+    {
+      "id": "siege",
+      "file": "roman-siege-of-jerusalem.png",
+      "aspect": "landscape",
+      "alt": "Roman legions and siege works surround the walls of Jerusalem",
+      "prompt": "The Roman siege of Jerusalem in AD 70 seen from the Roman camp on a hillside: legionaries in first-century armor, wooden siege towers and earth ramps, a general on horseback studying the city, the massive walls of Jerusalem and the Temple in the distance under a heavy sky with shafts of warm light."
+    },
+    {
+      "id": "fire",
+      "file": "temple-in-flames-ad70.png",
+      "aspect": "landscape",
+      "alt": "The Temple of Jerusalem burning at night as the city falls",
+      "prompt": "The Temple of Jerusalem on fire at night in AD 70, seen from a distance across the city roofs: flames and glowing smoke rising from the sanctuary, small silhouettes of Roman soldiers on the walls, the scene solemn and sorrowful rather than violent."
+    },
+    {
+      "id": "arch",
+      "file": "arch-of-titus-relief.png",
+      "aspect": "landscape",
+      "alt": "A carved stone relief showing Roman soldiers carrying the golden lampstand from the Temple",
+      "prompt": "A weathered marble relief in the style of the Arch of Titus in Rome: Roman soldiers in procession carrying the seven-branched golden lampstand taken from the Temple of Jerusalem. Soft raking light across the carved stone."
+    },
+    {
+      "id": "bible",
+      "file": "open-bible-at-sunrise.png",
+      "aspect": "landscape",
+      "alt": "An open Bible on a wooden table by a window as the sun rises",
+      "prompt": "An old open Bible resting on a simple wooden table beside a window at sunrise, warm light falling across the pages, a pair of reading glasses and a cup nearby, peaceful and hopeful mood. The page text is soft and unreadable."
+    }
+  ],
+  "sections": [
+    {
+      "id": "guide",
+      "template": "guide",
+      "title": "How to Use This Study",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This study walks through one chapter of *The Great Controversy* by Ellen G. White (1888), in plain words and large print."
+        },
+        {
+          "type": "heading",
+          "text": "Eight Parts in Every Chapter"
+        },
+        {
+          "type": "parts",
+          "items": [
+            "The Story",
+            "Historical Background",
+            "Plain Meaning",
+            "Visual Learning",
+            "Scripture Link",
+            "Key Lessons",
+            "Reflection Questions",
+            "Personal Application"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Know Who Is Speaking"
+        },
+        {
+          "type": "legend",
+          "items": [
+            {
+              "kind": "scripture",
+              "text": "The words of the Bible, quoted from the King James Version."
+            },
+            {
+              "kind": "history",
+              "text": "Facts from history, with the ancient writer named where possible."
+            },
+            {
+              "kind": "egw",
+              "text": "What Ellen White teaches in this chapter, retold in simple words."
+            },
+            {
+              "kind": "note",
+              "text": "Explanations added by the editors of this study to help the reader."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "part": 1,
+      "template": "narrative",
+      "title": "The Story",
+      "blocks": [
+        {
+          "type": "image",
+          "image": "temple",
+          "size": "hero",
+          "caption": "The Temple was the pride of Jerusalem. Its white stone and gold could be seen for miles."
+        },
+        {
+          "type": "p",
+          "lead": true,
+          "text": "It was a day of joy. Jesus was riding toward Jerusalem, and a great crowd walked with Him. They waved palm branches and shouted praises. From the top of the Mount of Olives, the whole city came into view."
+        },
+        {
+          "type": "p",
+          "text": "The evening sun lit the white walls of the Temple. Its gold shone like fire. It was one of the most beautiful sights in the world."
+        },
+        {
+          "type": "p",
+          "text": "The people expected Jesus to smile. Instead, He stopped. He looked at the city, and He began to cry."
+        },
+        {
+          "type": "verse",
+          "text": "And when he was come near, he beheld the city, and wept over it, Saying, If thou hadst known, even thou, at least in this thy day, the things which belong unto thy peace! but now they are hid from thine eyes.",
+          "ref": "Luke 19:41–42"
+        },
+        {
+          "type": "heading",
+          "text": "Why Jesus Wept"
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "text": [
+            "Ellen White explains that these were not tears for Himself. Jesus knew the cross was only a few days away, yet His sorrow was for the people of Jerusalem.",
+            "He could see what they could not. The city was about to turn away from the only One who could save it."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "For hundreds of years God had cared for this city. He had sent prophets to teach and warn its people. Again and again, the messengers were refused. Now God’s own Son had come, and He too would be rejected."
+        },
+        {
+          "type": "verse",
+          "text": "O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not!",
+          "ref": "Matthew 23:37"
+        },
+        {
+          "type": "heading",
+          "text": "“Not One Stone Upon Another”"
+        },
+        {
+          "type": "image",
+          "image": "stones",
+          "size": "wide",
+          "caption": "The disciples admired the great stones of the Temple. Jesus saw their future."
+        },
+        {
+          "type": "p",
+          "text": "Soon after, the disciples pointed to the Temple buildings. The stones were huge and beautifully cut. Surely nothing could ever move them."
+        },
+        {
+          "type": "p",
+          "text": "Jesus gave an answer they never forgot."
+        },
+        {
+          "type": "verse",
+          "text": "See ye not all these things? verily I say unto you, There shall not be left here one stone upon another, that shall not be thrown down.",
+          "ref": "Matthew 24:2"
+        },
+        {
+          "type": "p",
+          "text": "The disciples were troubled. Later, sitting on the Mount of Olives, they asked Him when this would happen, and what would be the sign of His coming and of the end of the world (Matthew 24:3)."
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "title": "Two Events in One Answer",
+          "text": [
+            "Ellen White teaches that Jesus answered both questions together. Part of what He said pointed to the fall of Jerusalem. Part pointed far ahead, to the end of the world and His return.",
+            "In her view, what happened to Jerusalem is a small picture of what will one day happen to a world that refuses God’s mercy."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Years of Mercy"
+        },
+        {
+          "type": "p",
+          "text": "Judgment did not fall at once. For nearly forty years after Jesus spoke, Jerusalem still stood. The good news about Jesus was preached in its streets. Many people believed. But the city as a whole did not change its course."
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "text": "Ellen White sees these years as proof of God’s patience. He waited, as a loving father waits for a child to come home."
+        },
+        {
+          "type": "heading",
+          "text": "The Sign and the Escape"
+        },
+        {
+          "type": "p",
+          "text": "Jesus had given His followers a clear sign to watch for."
+        },
+        {
+          "type": "verse",
+          "text": "And when ye shall see Jerusalem compassed with armies, then know that the desolation thereof is nigh. Then let them which are in Judaea flee to the mountains; and let them which are in the midst of it depart out.",
+          "ref": "Luke 21:20–21"
+        },
+        {
+          "type": "image",
+          "image": "pella",
+          "size": "wide",
+          "caption": "When the Roman army pulled back, the Christians remembered the words of Jesus and left the city."
+        },
+        {
+          "type": "p",
+          "text": "In the year AD 66 a Roman army under Cestius Gallus surrounded Jerusalem. Then, to everyone’s surprise, the army turned and left. No one inside the city could explain it."
+        },
+        {
+          "type": "p",
+          "text": "The Christians knew this was the sign. They left the city without delay and found safety in the town of Pella, beyond the Jordan River."
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "text": "Ellen White writes that not one Christian died in the destruction of Jerusalem. Those who believed the words of Jesus and acted on them were kept safe."
+        },
+        {
+          "type": "heading",
+          "text": "The City Falls"
+        },
+        {
+          "type": "image",
+          "image": "siege",
+          "size": "wide",
+          "caption": "In AD 70 the Roman general Titus surrounded Jerusalem with four legions."
+        },
+        {
+          "type": "p",
+          "text": "Four years later the Romans came back, led by Titus. It was Passover time, and the city was crowded with visitors. The gates were shut behind them."
+        },
+        {
+          "type": "p",
+          "text": "Inside the walls, rival groups fought one another. Food ran out, and hunger spread."
+        },
+        {
+          "type": "p",
+          "text": "Titus wished to save the Temple. But in the confusion of battle a soldier threw a burning torch into the building. Soon the whole Temple was in flames. The city was torn down, just as Jesus had said."
+        },
+        {
+          "type": "image",
+          "image": "fire",
+          "size": "wide",
+          "caption": "The Temple burned in the summer of AD 70. It has never been rebuilt."
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "title": "A Warning and a Promise",
+          "text": [
+            "Ellen White teaches that God did not delight in this ruin. The people had turned from His protection, and they were left to the results of their own choice.",
+            "She sees Jerusalem as a warning to the whole world, and also as a promise: Jesus will care for those who trust Him at the end, as He did then."
+          ],
+          "keep": true
+        },
+        {
+          "type": "p",
+          "text": "The stones of the Temple fell. The words of Jesus did not."
+        },
+        {
+          "type": "verse",
+          "text": "Heaven and earth shall pass away, but my words shall not pass away.",
+          "ref": "Matthew 24:35"
+        }
+      ]
+    },
+    {
+      "id": "background",
+      "part": 2,
+      "template": "history",
+      "title": "Historical Background",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The fall of Jerusalem is one of the best-recorded events of the ancient world. Here is what historians know."
+        },
+        {
+          "type": "panel",
+          "kind": "history",
+          "title": "Jerusalem Under Rome",
+          "text": [
+            "In the time of Jesus, Judea was ruled by the Roman Empire. Many Jews longed to be free, and anger against Rome grew year by year.",
+            "The Temple had been rebuilt on a grand scale by King Herod the Great, beginning about 20 BC. Work on its courts went on for decades."
+          ]
+        },
+        {
+          "type": "panel",
+          "kind": "history",
+          "title": "The War of AD 66–70",
+          "text": [
+            "Open revolt began in AD 66. The Roman governor of Syria, Cestius Gallus, marched on Jerusalem, reached the Temple walls, and then withdrew for reasons that are still debated.",
+            "In AD 70 Titus, son of the new emperor Vespasian, laid siege to the city. The siege lasted from spring until late summer. The Romans built a wall around the whole city so that no one could get out and no food could get in."
+          ]
+        },
+        {
+          "type": "panel",
+          "kind": "history",
+          "title": "How We Know",
+          "text": [
+            "Most of our details come from Flavius Josephus, a Jewish historian who was present with the Roman army. He wrote *The Jewish War* a few years later.",
+            "Josephus says that 1,100,000 people died and 97,000 were taken captive. Many modern historians think these numbers are too high, but all agree the loss of life was very great.",
+            "The church historian Eusebius, writing in the fourth century, records that the Christians of Jerusalem had moved to Pella before the siege."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Important People"
+        },
+        {
+          "type": "people",
+          "items": [
+            {
+              "name": "Herod the Great",
+              "role": "King of Judea, died about 4 BC",
+              "text": "He rebuilt the Temple in white stone and gold. It was this Temple the disciples admired."
+            },
+            {
+              "name": "Cestius Gallus",
+              "role": "Roman governor of Syria",
+              "text": "He surrounded Jerusalem in AD 66 and then suddenly pulled his army back."
+            },
+            {
+              "name": "Titus",
+              "role": "Roman general, later emperor",
+              "text": "He commanded the siege of AD 70. Josephus says he wanted to spare the Temple."
+            },
+            {
+              "name": "Josephus",
+              "role": "Jewish historian and eyewitness",
+              "text": "He watched the siege from the Roman side and wrote down what he saw."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "kind": "history",
+          "title": "What Remains Today",
+          "text": "Stones thrown down by the Roman soldiers still lie beside the Temple Mount. In Rome, the Arch of Titus, built about AD 81, still stands."
+        },
+        {
+          "type": "image",
+          "image": "arch",
+          "size": "wide",
+          "caption": "The Arch of Titus: soldiers carry away the Temple’s golden lampstand."
+        },
+        {
+          "type": "panel",
+          "kind": "note",
+          "title": "A Word of Care",
+          "text": "This chapter is about the choices of one city in one generation. It must never be used to blame Jewish people. Jesus Himself was a Jew, and so were His first followers. His tears over Jerusalem were tears of love."
+        }
+      ]
+    },
+    {
+      "id": "meaning",
+      "part": 3,
+      "template": "narrative",
+      "title": "Plain Meaning",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "1. God’s Heart Is Love"
+        },
+        {
+          "type": "p",
+          "text": "The chapter begins with tears, not anger. Jesus did not want Jerusalem to suffer. He wept because He loved its people and they would not come to Him."
+        },
+        {
+          "type": "heading",
+          "text": "2. God Is Very Patient"
+        },
+        {
+          "type": "p",
+          "text": "God sent messenger after messenger. Even after Jesus was rejected, nearly forty more years of mercy were given. God is slow to give up on anyone."
+        },
+        {
+          "type": "heading",
+          "text": "3. Choices Have Results"
+        },
+        {
+          "type": "p",
+          "text": "Mercy can be refused. Ellen White teaches that when people keep pushing God away, He does not force them. In the end He lets them have what they have chosen, and they lose His protection."
+        },
+        {
+          "type": "heading",
+          "text": "4. God’s Word Comes True"
+        },
+        {
+          "type": "p",
+          "text": "Jesus said the Temple would be thrown down, stone from stone. About forty years later, it was. What God says can be trusted."
+        },
+        {
+          "type": "heading",
+          "text": "5. Those Who Listen Are Kept Safe"
+        },
+        {
+          "type": "p",
+          "text": "Jesus told His followers what to watch for and what to do. Those who believed Him left in time. Listening to Jesus is never wasted."
+        },
+        {
+          "type": "heading",
+          "text": "6. Jerusalem Is a Picture of the End"
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "text": [
+            "This is the central lesson of the chapter. Ellen White teaches that the prophecy of Jesus has a second and larger meaning.",
+            "As Jerusalem fell after refusing God’s mercy, so this world is moving toward a final day. And God will care for His people then, as He did before."
+          ]
+        },
+        {
+          "type": "panel",
+          "kind": "note",
+          "title": "Why the Book Begins Here",
+          "text": "*The Great Controversy* tells the long story of the struggle between Christ and Satan. It opens with Jerusalem because this one city shows the themes of the whole book: love offered, love refused, a warning given, and a people kept safe."
+        }
+      ]
+    },
+    {
+      "id": "visual",
+      "part": 4,
+      "template": "visual",
+      "title": "Visual Learning",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Jerusalem Under Siege, AD 70"
+        },
+        {
+          "type": "svg",
+          "file": "map-jerusalem-siege-ad70.svg",
+          "caption": "A simplified map, not drawn to scale. Jesus wept on the Mount of Olives. Forty years later a Roman legion camped on that same hill. The Christians had already escaped by the road east."
+        },
+        {
+          "type": "heading",
+          "text": "From Prophecy to Fulfillment"
+        },
+        {
+          "type": "timeline",
+          "items": [
+            {
+              "date": "About AD 31",
+              "title": "Jesus Weeps Over the City",
+              "text": "He foretells that the Temple will be thrown down and gives a sign for escape."
+            },
+            {
+              "date": "AD 66",
+              "title": "The First Roman Army",
+              "text": "Cestius Gallus surrounds Jerusalem, then withdraws without warning."
+            },
+            {
+              "date": "AD 66–70",
+              "title": "The Christians Leave",
+              "text": "Believers remember the sign and move to Pella, across the Jordan River."
+            },
+            {
+              "date": "Spring AD 70",
+              "title": "Titus Surrounds Jerusalem",
+              "text": "The siege begins at Passover, with the city full of visitors."
+            },
+            {
+              "date": "Summer AD 70",
+              "title": "The Temple Burns",
+              "text": "Fire destroys the Temple. Within weeks the whole city has fallen."
+            },
+            {
+              "date": "About AD 81",
+              "title": "The Arch of Titus",
+              "text": "Rome builds an arch to honor the victory. It still stands today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scripture",
+      "part": 5,
+      "template": "bible",
+      "title": "Scripture Link",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Read each passage slowly. Then read the short note that follows it."
+        },
+        {
+          "type": "heading",
+          "text": "The Warning"
+        },
+        {
+          "type": "verse",
+          "text": "For the days shall come upon thee, that thine enemies shall cast a trench about thee, and compass thee round, and keep thee in on every side, And shall lay thee even with the ground, and thy children within thee; and they shall not leave in thee one stone upon another; because thou knewest not the time of thy visitation.",
+          "ref": "Luke 19:43–44"
+        },
+        {
+          "type": "p",
+          "text": "**What it means:** Jesus described the siege about forty years before it happened. The “time of thy visitation” was the time when God’s own Son visited the city, and it did not know Him."
+        },
+        {
+          "type": "heading",
+          "text": "The Empty House"
+        },
+        {
+          "type": "verse",
+          "text": "Behold, your house is left unto you desolate.",
+          "ref": "Matthew 23:38"
+        },
+        {
+          "type": "p",
+          "text": "**What it means:** The Temple had been called God’s house. When its leaders rejected Jesus, He called it “your house.” Without God’s presence, the most beautiful building is empty."
+        },
+        {
+          "type": "heading",
+          "text": "The Patience of God"
+        },
+        {
+          "type": "verse",
+          "text": "The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance.",
+          "ref": "2 Peter 3:9"
+        },
+        {
+          "type": "p",
+          "text": "**What it means:** When God waits, it is not because He has forgotten. He waits because He wants everyone to have time to turn to Him."
+        },
+        {
+          "type": "heading",
+          "text": "The Call to Watch"
+        },
+        {
+          "type": "verse",
+          "text": "Watch therefore: for ye know not what hour your Lord doth come.",
+          "ref": "Matthew 24:42"
+        },
+        {
+          "type": "p",
+          "text": "**What it means:** The first Christians watched for the sign Jesus gave, and they were ready. Jesus asks His people today to stay awake and ready for His return."
+        },
+        {
+          "type": "heading",
+          "text": "The Promise"
+        },
+        {
+          "type": "verse",
+          "text": "And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.",
+          "ref": "John 14:3"
+        },
+        {
+          "type": "p",
+          "text": "**What it means:** The story does not end in ruins. The same Jesus who wept over Jerusalem has promised to come back for His people."
+        }
+      ]
+    },
+    {
+      "id": "lessons",
+      "part": 6,
+      "template": "reflection",
+      "title": "Key Lessons",
+      "blocks": [
+        {
+          "type": "lessons",
+          "items": [
+            {
+              "title": "Jesus feels sorrow for the lost.",
+              "text": "His tears over Jerusalem show how God feels about every person who turns away."
+            },
+            {
+              "title": "God gives time.",
+              "text": "He waited nearly forty years. His patience is an invitation, not a sign that He does not care."
+            },
+            {
+              "title": "Mercy must be received.",
+              "text": "God will not force anyone. To be helped by Him, we must be willing to come."
+            },
+            {
+              "title": "God’s Word is sure.",
+              "text": "What Jesus foretold came to pass. His promises for the future are just as certain."
+            },
+            {
+              "title": "Obedience brings safety.",
+              "text": "The believers who acted on the words of Jesus were kept safe when trouble came."
+            },
+            {
+              "title": "The past is a lesson for the future.",
+              "text": "Ellen White sees in Jerusalem a picture of the last days, and a call to be ready."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "part": 7,
+      "template": "reflection",
+      "title": "Reflection Questions",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Think about these questions quietly, or talk about them with a friend or a study group."
+        },
+        {
+          "type": "questions",
+          "items": [
+            "Why do you think Jesus wept at a moment when everyone around Him was rejoicing?",
+            "What does the picture of a hen gathering her chicks tell you about how God feels toward you?",
+            "God waited nearly forty years before Jerusalem fell. Where have you seen God’s patience in your own life?",
+            "The Christians left the city because they remembered the words of Jesus. Which of His words do you most want to remember?",
+            "What do you think it means to “watch” for the coming of Jesus today?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "part": 8,
+      "template": "reflection",
+      "title": "Personal Application",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This chapter is about a city long ago. But its message is for each of us today."
+        },
+        {
+          "type": "panel",
+          "kind": "apply",
+          "title": "This Week",
+          "text": [
+            "**Come to Him.** Jesus longed to gather Jerusalem close. He longs to gather you too. Tell Him today that you are willing.",
+            "**Read His words.** Read Matthew 24 slowly this week. Mark the promises you find.",
+            "**Pray for someone.** Think of one person who seems far from God. Ask God to help you care for that person the way Jesus cared for Jerusalem."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "bible",
+          "size": "wide",
+          "caption": "“Thy word is a lamp unto my feet, and a light unto my path.” Psalm 119:105"
+        },
+        {
+          "type": "panel",
+          "kind": "note",
+          "title": "A Prayer",
+          "text": "*Lord Jesus, thank You for loving me with a patient love. Help me to hear Your voice and follow You. Keep me close to You, and make me ready for the day You come again. Amen.*"
+        }
+      ]
+    }
+  ]
+}
