@@ -1,7 +1,7 @@
 {
   "number": 1,
   "title": "Destruction of Jerusalem",
-  "status": "DRAFT — educational text written before a verified public-domain 1888 source was supplied. Every statement marked as Ellen White's view must be checked against that source before approval.",
+  "status": "DRAFT — text checked against the 1888 source (digital edition supplied by the user, cross-checked with the Library of Congress scan). Awaiting the user's review and the illustrations.",
   "startPage": 1,
   "cover": {
     "image": "ch01-cover",
@@ -109,7 +109,7 @@
         },
         {
           "type": "p",
-          "text": "For hundreds of years God had cared for this city. He had sent prophets to teach and warn its people. Again and again, the messengers were refused. Now God’s own Son had come, and He too would be rejected."
+          "text": "For more than a thousand years God had cared for this city and its people. He had sent prophets to teach and warn its people. Again and again, the messengers were refused. Now God’s own Son had come, and He too would be rejected."
         },
         {
           "type": "verse",
@@ -163,7 +163,10 @@
         {
           "type": "panel",
           "kind": "egw",
-          "text": "Ellen White sees these years as proof of God’s patience. He waited, as a loving father waits for a child to come home."
+          "text": [
+            "Ellen White sees these years as proof of God’s patience. He waited, as a loving father waits for a child to come home.",
+            "She adds that the children were not condemned for the sins of their parents. They were given their own time to hear the good news and to choose."
+          ]
         },
         {
           "type": "heading",
@@ -190,12 +193,15 @@
         },
         {
           "type": "p",
-          "text": "The Christians knew this was the sign. They left the city without delay and found safety in the town of Pella, beyond the Jordan River."
+          "text": "The Christians knew this was the sign. While the city’s fighters chased the retreating Romans, the believers slipped away. They found safety in the town of Pella, beyond the Jordan River."
         },
         {
-          "type": "panel",
-          "kind": "egw",
-          "text": "Ellen White writes that not one Christian died in the destruction of Jerusalem. Those who believed the words of Jesus and acted on them were kept safe."
+          "type": "egwquote",
+          "text": "Not one Christian perished in the destruction of Jerusalem."
+        },
+        {
+          "type": "p",
+          "text": "Those who believed the words of Jesus, and acted on them, were kept safe."
         },
         {
           "type": "heading",
@@ -206,6 +212,12 @@
           "image": "ch01-siege",
           "size": "wide",
           "caption": "In AD 70 the Roman general Titus surrounded Jerusalem with four legions."
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "title": "Warnings Before the End",
+          "text": "Ellen White tells of strange signs seen before the city fell, signs also recorded by the historian Josephus. For seven years one man walked the streets crying, “Woe to Jerusalem!” Still the city would not listen."
         },
         {
           "type": "p",
@@ -226,14 +238,21 @@
           "caption": "The Temple burned in the summer of AD 70. It has never been rebuilt."
         },
         {
+          "type": "p",
+          "text": "Ellen White writes that more than a million people died. The survivors were sold as slaves or scattered across the earth."
+        },
+        {
           "type": "panel",
           "kind": "egw",
           "title": "A Warning and a Promise",
           "text": [
-            "Ellen White teaches that God did not delight in this ruin. The people had turned from His protection, and they were left to the results of their own choice.",
-            "She sees Jerusalem as a warning to the whole world, and also as a promise: Jesus will care for those who trust Him at the end, as He did then."
-          ],
-          "keep": true
+            "Ellen White teaches that God did not act here as an executioner. The people had pushed away His protection, and Satan was left free to work his will. The cruelty of those days, she says, shows what Satan’s rule is like.",
+            "She sees Jerusalem as a warning to the whole world, and also as a promise. When Jesus comes again, His people will be delivered, as they were then."
+          ]
+        },
+        {
+          "type": "egwquote",
+          "text": "The Saviour’s prophecy concerning the visitation of judgments upon Jerusalem is to have another fulfillment, of which that terrible desolation was but a faint shadow."
         },
         {
           "type": "verse",
@@ -357,7 +376,7 @@
         },
         {
           "type": "p",
-          "text": "Mercy can be refused. Ellen White teaches that when people keep pushing God away, He does not force them. In the end He lets them have what they have chosen, and they lose His protection."
+          "text": "Mercy can be refused. Ellen White teaches that when people keep pushing God away, He does not force them. In the end His protecting hand is withdrawn, and they are left to the cruel power of Satan, the master they have chosen."
         },
         {
           "type": "heading",
@@ -377,14 +396,27 @@
         },
         {
           "type": "heading",
-          "text": "6. Jerusalem Is a Picture of the End"
+          "text": "6. Jesus Was the Temple’s True Glory"
+        },
+        {
+          "type": "panel",
+          "kind": "egw",
+          "text": [
+            "The prophet Haggai had promised that the second Temple would have greater glory than Solomon’s (Haggai 2:9). Ellen White explains that gold and marble did not fulfill that promise. Jesus did, when He taught and healed in its courts.",
+            "When He walked out of the Temple for the last time, she says, its glory went with Him."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "7. Jerusalem Is a Picture of the End"
         },
         {
           "type": "panel",
           "kind": "egw",
           "text": [
             "This is the central lesson of the chapter. Ellen White teaches that the prophecy of Jesus has a second and larger meaning.",
-            "As Jerusalem fell after refusing God’s mercy, so this world is moving toward a final day. And God will care for His people then, as He did before."
+            "As Jerusalem fell after refusing God’s mercy, so this world is moving toward a final day. And God will care for His people then, as He did before.",
+            "She also draws a parallel. The great sin of Jerusalem was rejecting Christ. The great sin of the Christian world at the end, she says, will be rejecting the law of God."
           ]
         },
         {
@@ -428,9 +460,9 @@
               "text": "Cestius Gallus surrounds Jerusalem, then withdraws without warning."
             },
             {
-              "date": "AD 66–70",
+              "date": "AD 66",
               "title": "The Christians Leave",
-              "text": "Believers remember the sign and move to Pella, across the Jordan River."
+              "text": "As the Roman army retreats, believers remember the sign and flee to Pella, across the Jordan River."
             },
             {
               "date": "Spring AD 70",

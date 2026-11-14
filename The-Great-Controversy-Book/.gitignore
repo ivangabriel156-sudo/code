@@ -10,3 +10,5 @@ output/*/review/
 .flow-profile/
 .browser-profile/
 downloads/
+# The user's licensed digital edition is a working reference only and is not redistributed
+source/working-text/

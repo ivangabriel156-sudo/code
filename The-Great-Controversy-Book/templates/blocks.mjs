@@ -87,6 +87,13 @@ const renderers = {
       <figcaption class="verse-ref">${esc(b.ref)}</figcaption>
     </figure>`,
 
+  // A short, word-for-word quotation from the 1888 text, clearly marked as Ellen White's own words.
+  egwquote: (b) => `<figure class="block verse verse--egw">
+      <div class="chip chip--egw" data-min="12">Ellen White’s Words</div>
+      <blockquote class="verse-text">“${inline(b.text)}”</blockquote>
+      <figcaption class="verse-ref">${esc(b.ref || 'The Great Controversy, 1888')}</figcaption>
+    </figure>`,
+
   // Each timeline entry is its own block, so a long timeline flows across pages.
   timeline: (b) => b.items.map((it) => `<div class="block tl-item">
       <div class="tl-date">${inline(it.date)}</div>

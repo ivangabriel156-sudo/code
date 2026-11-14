@@ -10,12 +10,12 @@ paginated, print-size A4 PDF with real (selectable) text comes out.
 | --- | --- |
 | Publishing system (templates, pagination, QA, PDF export) | Working |
 | Visual identity | Matched to `reference/reference-gamma.pdf`: Cormorant Garamond headings, Source Sans 3 text, and its burgundy, cream, beige and gold sampled from the file. Type is much larger than the reference, for elderly readers. |
-| Chapter 1 layout proof | `output/chapter-01/chapter-01-DRAFT.pdf` — 25 pages, QA clean |
+| Chapter 1 layout proof | `output/chapter-01/chapter-01-DRAFT.pdf` — 28 pages, QA clean |
 | Illustration pipeline (manifest, prompts, approval workflow, reports, PDF insertion) | Working; tested with synthetic test cards only |
 | Google Flow | **Not connected.** No image has been generated. See `docs/FLOW-WORKFLOW.md`. |
 | Illustrations | **0 of 8 for Chapter 1**, plus 2 character references outstanding. The proof shows labelled placeholders. |
-| `ellen-white-source.pdf` (source text) | **Not received.** Its license could not be inspected. |
-| Chapter 1 text | **Draft.** Written from general knowledge of the chapter, not from a verified source. Every "Ellen White's View" panel must be checked against a verified public-domain 1888 text before approval. |
+| Source text | Two copies of the 1888 text, split into 42 chapters. See `source/README.md` for provenance and the licence note. |
+| Chapter 1 text | **Draft, checked against the 1888 source.** Ellen White's ideas are paraphrased and labelled; two short sentences are quoted word for word. Awaiting the owner's review. |
 | Map and timeline | Real — drawn as vector artwork in the chapter folder. |
 | Chapters 2–42 | Not started (waiting for Chapter 1 approval). |
 
@@ -53,6 +53,7 @@ The full procedure and the options for connecting Flow are in `docs/FLOW-WORKFLO
 ```
 book.json                     book-wide settings (title, edition, Bible version)
 reference/                    the Gamma visual reference
+source/                       the 1888 text, by chapter (public-domain scan committed; licensed working copy local only)
 art-direction/                style guide and recurring-character references for all chapters
 assets/fonts/                 Cormorant Garamond + Source Sans 3 (SIL Open Font License)
 assets/images/chapter-NN/     approved illustrations, one folder per chapter
@@ -85,7 +86,7 @@ Each section picks a page template — `narrative`, `history`, `visual`, `bible`
 `guide` — which changes the page's background, banding and framing while keeping the same brand.
 
 Block types: `p`, `heading`, `image`, `svg`, `verse`, `panel`, `timeline`, `people`, `lessons`,
-`questions`, `legend`, `parts`. Text accepts `*italic*` and `**bold**`.
+`questions`, `legend`, `parts`, `egwquote`. Text accepts `*italic*` and `**bold**`.
 
 Every panel declares where its content comes from, and the label is printed on the page:
 
@@ -94,6 +95,7 @@ Every panel declares where its content comes from, and the label is printed on t
 | (`verse` block) | Scripture · KJV | Bible quotations, word for word |
 | `history` | History | Historical facts, naming the ancient source where possible |
 | `egw` | Ellen White's View | Her interpretation, paraphrased |
+| (`egwquote` block) | Ellen White's Words | A short word-for-word quotation from the 1888 text |
 | `note` | Study Note | Explanations added by this edition's editors |
 | `apply` | For Your Life | Personal application |
 
