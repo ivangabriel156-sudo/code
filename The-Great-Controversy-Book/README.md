@@ -9,46 +9,58 @@ paginated, print-size A4 PDF with real (selectable) text comes out.
 | Item | Status |
 | --- | --- |
 | Publishing system (templates, pagination, QA, PDF export) | Working |
-| Chapter 1 layout proof | `output/chapter-01/chapter-01-DRAFT.pdf` — 26 pages, QA clean |
-| `reference-gamma.pdf` (visual reference) | **Not received.** The design follows the written brief (burgundy, cream, gold, serif headings) and has not been matched against the reference. |
+| Visual identity | Matched to `reference/reference-gamma.pdf`: Cormorant Garamond headings, Source Sans 3 text, and its burgundy, cream, beige and gold sampled from the file. Type is much larger than the reference, for elderly readers. |
+| Chapter 1 layout proof | `output/chapter-01/chapter-01-DRAFT.pdf` — 25 pages, QA clean |
+| Illustration pipeline (manifest, prompts, approval workflow, reports, PDF insertion) | Working; tested with synthetic test cards only |
+| Google Flow | **Not connected.** No image has been generated. See `docs/FLOW-WORKFLOW.md`. |
+| Illustrations | **0 of 8 for Chapter 1**, plus 2 character references outstanding. The proof shows labelled placeholders. |
 | `ellen-white-source.pdf` (source text) | **Not received.** Its license could not be inspected. |
 | Chapter 1 text | **Draft.** Written from general knowledge of the chapter, not from a verified source. Every "Ellen White's View" panel must be checked against a verified public-domain 1888 text before approval. |
-| Illustrations | **None generated.** No image-generation service is connected. The proof shows labelled placeholders. |
 | Map and timeline | Real — drawn as vector artwork in the chapter folder. |
 | Chapters 2–42 | Not started (waiting for Chapter 1 approval). |
 
 ## Commands
 
 ```bash
-npm run build -- 1 --draft --preview   # proof PDF; missing pictures become labelled placeholders
-npm run build -- 1                     # final PDF; refuses to build if any picture is missing
-npm run images -- 1 --list             # show every illustration prompt for a chapter
-npm run images -- 1                    # generate missing illustrations (needs OPENAI_API_KEY)
+npm run build -- 1 --draft --preview   # proof PDF; unapproved pictures become labelled placeholders
+npm run build -- 1                     # final PDF; refuses to build until every picture is approved
+npm run images -- status 1             # illustration report for a chapter
+npm run images -- next 1               # the next picture to produce, with its full prompt
+npm run images -- help                 # every workflow command
 ```
 
 Requires Node 20+ and Playwright with Chromium (`npm i playwright && npx playwright install chromium`).
 If Chromium lives somewhere unusual, set `CHROMIUM_PATH`.
 
-## Connecting image generation
+## Illustrations
 
-`scripts/generate-images.mjs` calls the OpenAI Images API. Set `OPENAI_API_KEY` (optionally
-`IMAGE_MODEL`, `IMAGE_QUALITY`) and run `npm run images -- 1`. This integration has **not been tested**
-— no key was available when it was written. Without a key the script stops, explains what is missing,
-and creates nothing. Pictures made any other way can simply be saved into
-`chapters/chapter-NN/images/` under the filenames listed by `--list`.
+Pictures are made in Google Flow and controlled from this project:
 
-All prompts share the art direction in `scripts/art-direction.json`, which keeps the look consistent
-across the 42 chapters.
+- `chapters/chapter-NN/image-manifest.json` lists every picture a chapter needs: scene, period,
+  characters, environment, style, camera, lighting, aspect ratio, page, filename, and its generation
+  and approval status. The build writes the real page number back into the manifest.
+- `art-direction/style-guide.json` (explained in `STYLE-GUIDE.md`) holds the one style used for all
+  42 chapters; `art-direction/characters.json` holds recurring characters and their reference images.
+- `scripts/images.mjs` runs the workflow: confirm, ingest, review, approve, reject, revise,
+  regenerate, pause, resume, report. It never contacts Flow and never spends credits.
+- Approved pictures are saved to `assets/images/chapter-NN/` and placed in the PDF automatically.
+  Unapproved variations stay in a local candidates folder that git ignores.
+
+The full procedure and the options for connecting Flow are in `docs/FLOW-WORKFLOW.md`.
 
 ## Project layout
 
 ```
 book.json                     book-wide settings (title, edition, Bible version)
-assets/fonts/                 Playfair Display + Source Serif 4 (SIL Open Font License)
-assets/images/                shared artwork (ornaments, book cover) — empty for now
+reference/                    the Gamma visual reference
+art-direction/                style guide and recurring-character references for all chapters
+assets/fonts/                 Cormorant Garamond + Source Sans 3 (SIL Open Font License)
+assets/images/chapter-NN/     approved illustrations, one folder per chapter
+assets/images/characters/     approved character reference images
 chapters/chapter-NN/
-  content.json                the chapter: cover, illustration list with prompts, eight sections
-  images/                     that chapter's illustrations, maps and diagrams
+  content.json                the chapter text: cover and eight sections
+  image-manifest.json         the chapter's illustration plan and status
+  images/                     maps and diagrams (vector), plus local unapproved candidates
 templates/
   blocks.mjs                  content blocks: paragraph, verse box, panels, timeline, people, lessons…
   document.mjs                chapter cover + document assembly
@@ -57,15 +69,16 @@ styles/book.css               visual identity and typography
 scripts/
   build.mjs                   content → HTML → QA → PDF
   qa.mjs                      automated quality control
-  generate-images.mjs         illustration generation
-  art-direction.json          shared illustration style
-output/chapter-NN/            PDFs and QA reports
+  images.mjs                  illustration workflow commands
+  image-lib.mjs               manifests, prompt builder, image validation, reports
+docs/FLOW-WORKFLOW.md         Google Flow connection options and the step-by-step workflow
+output/chapter-NN/            PDFs, QA report, image report
 ```
 
 ## Writing a chapter
 
-Each chapter is one `content.json` with a `cover`, an `images` list (id, filename, alt text, prompt)
-and `sections`. The eight study sections use the ids `story`, `background`, `meaning`, `visual`,
+Each chapter is one `content.json` with a `cover` and `sections`, plus an `image-manifest.json`;
+image blocks refer to manifest ids. The eight study sections use the ids `story`, `background`, `meaning`, `visual`,
 `scripture`, `lessons`, `questions`, `application`; QA fails the build if one is missing.
 
 Each section picks a page template — `narrative`, `history`, `visual`, `bible`, `reflection` or
@@ -89,8 +102,8 @@ Every panel declares where its content comes from, and the label is printed on t
 | Element | Size | Brief |
 | --- | --- | --- |
 | Chapter title | 36 | 30–36 |
-| Section heading | 28 | 25–30 |
-| Subheadings | 21–22 | 21–24 |
+| Section heading | 30 | 25–30 |
+| Subheadings | 23–24 | 21–24 |
 | Bible passages | 19 | 18–20 |
 | Main text | 18 (opening paragraph 19) | 17–19 |
 | Captions / labels / running heads | 12–15 | never below 12 on the printed page |
@@ -106,7 +119,8 @@ Every build checks, and refuses to export the PDF on any error:
 - every text element is within the size ranges above, and nothing is below its minimum
 - no content overflows a page, sticks out past the page edge, or is clipped
 - no blocks overlap; map labels stay inside the map and do not collide
-- every image loaded; images below 150 dpi at printed size are reported
+- every image loaded; images below 150 dpi at printed size, or cropped by their frame, are reported
+- a final build fails if any illustration is unapproved, missing, or still a placeholder
 - pages less than 35% full are reported as warnings
 
 The automated checks do not replace looking at the pages: use `--preview` and read the PDF.

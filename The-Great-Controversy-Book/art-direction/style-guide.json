@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "collection": "The Great Controversy — Illustrated Study Edition (42 chapters)",
+  "platform": "Google Flow",
+  "defaults": {
+    "aspectRatio": "16:9",
+    "variations": 2,
+    "minWidthPx": 1280,
+    "printWidthPx": 2000
+  },
+  "style": "Cinematic historical painting with the finish of a nineteenth-century academic oil painting and the framing of an epic film still. Painterly but realistic: visible fine brushwork, rich detail, natural human proportions, believable faces and hands. Warm palette of gold, amber, ochre, olive and deep russet, with soft cream highlights and deep brown shadows. Dignified, reverent, emotionally clear. One strong focal point, layered depth from foreground to far distance, generous sky.",
+  "lightingPresets": {
+    "golden-hour": "Low golden-hour sun, long soft shadows, warm rim light on figures, glowing haze over the distance.",
+    "morning": "Clear early-morning light, cool blue shadows warming to gold where the sun strikes stone.",
+    "overcast-drama": "Heavy broken cloud with shafts of warm light breaking through onto the main subject.",
+    "night-fire": "Night scene lit by distant fire: deep blue-black sky, orange glow on smoke and stone, no harsh detail in the shadows.",
+    "interior-window": "Soft daylight from a single window, gentle falloff, warm reflected light.",
+    "museum-raking": "Soft raking light across carved stone, revealing relief and texture."
+  },
+  "mustHave": [
+    "Historically appropriate architecture for the stated place and period",
+    "Historically appropriate clothing, hair and equipment for the stated place and period",
+    "Natural human proportions; correct hands with five fingers; calm, natural faces",
+    "People of the ancient Near East shown with Middle Eastern features and skin tones",
+    "Detailed, believable environment: terrain, vegetation, weather and materials of the region",
+    "Composition that stays readable when printed 17 cm wide"
+  ],
+  "avoid": [
+    "Any text, lettering, captions, inscriptions, signatures, logos or watermarks",
+    "Modern objects, modern clothing, modern buildings, glass windows, printed books in ancient scenes",
+    "Architecture from the wrong period (medieval castles, Gothic arches, domes or minarets in first-century Jerusalem)",
+    "Distorted or extra fingers, warped faces, duplicated limbs",
+    "Halos, glowing auras, wings, magic effects or other fantasy elements unless the scene description asks for them",
+    "Graphic gore; suffering is suggested with restraint",
+    "Cartoon, anime, 3D-render or stock-photo look"
+  ],
+  "historicalNotes": {
+    "first-century-judea": "Jerusalem before AD 70: pale golden limestone, flat roofs, the Temple of Herod as a tall white-and-gold sanctuary on a vast walled platform with colonnades. Judean dress: ankle-length wool or linen tunics, a mantle draped over the shoulder, head coverings for many women, leather sandals. No turbans of later Ottoman style.",
+    "roman-army-first-century": "Legionaries of about AD 70: segmented or mail armour, rectangular curved shields, crested helmets for officers only, red or undyed tunics, short swords, standards with eagles. Timber siege towers, earth ramps, leather tents."
+  }
+}

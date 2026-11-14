@@ -1,0 +1,112 @@
+{
+  "target": "chapter-01",
+  "generatedAt": "2026-11-14T16:58:48.209Z",
+  "paused": false,
+  "totals": {
+    "required": 8,
+    "generated": 0,
+    "approved": 0,
+    "pending": 8,
+    "rejected": 0,
+    "missingFiles": 0,
+    "failedGenerations": 0
+  },
+  "images": [
+    {
+      "id": "ch01-cover",
+      "title": "Jesus weeping over Jerusalem",
+      "file": "cover-jesus-weeping-over-jerusalem.png",
+      "intendedPage": "Page 1 · chapter cover",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-temple",
+      "title": "Herod's Temple in the morning",
+      "file": "herods-temple-morning.png",
+      "intendedPage": "Page 3 · The Story",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-stones",
+      "title": "The disciples and the Temple stones",
+      "file": "disciples-and-temple-stones.png",
+      "intendedPage": "Page 5 · The Story",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-pella",
+      "title": "Christians fleeing to Pella",
+      "file": "christians-fleeing-to-pella.png",
+      "intendedPage": "Page 8 · The Story",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-siege",
+      "title": "The Roman siege of Jerusalem",
+      "file": "roman-siege-of-jerusalem.png",
+      "intendedPage": "Page 9 · The Story",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-fire",
+      "title": "The Temple burning",
+      "file": "temple-burning-ad70.png",
+      "intendedPage": "Page 10 · The Story",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-arch",
+      "title": "Arch of Titus relief",
+      "file": "arch-of-titus-relief.png",
+      "intendedPage": "Page 14 · Historical Background",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "ch01-bible",
+      "title": "Open Bible at sunrise",
+      "file": "open-bible-at-sunrise.png",
+      "intendedPage": "Page 25 · Personal Application",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    }
+  ]
+}

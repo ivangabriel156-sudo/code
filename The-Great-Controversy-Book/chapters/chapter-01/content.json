@@ -4,71 +4,13 @@
   "status": "DRAFT — educational text written before a verified public-domain 1888 source was supplied. Every statement marked as Ellen White's view must be checked against that source before approval.",
   "startPage": 1,
   "cover": {
-    "image": "cover",
+    "image": "ch01-cover",
     "subtitle": "Jesus weeps over a city He loved, and warns the world of what is to come",
     "verse": {
       "text": "And when he was come near, he beheld the city, and wept over it.",
       "ref": "Luke 19:41"
     }
   },
-  "images": [
-    {
-      "id": "cover",
-      "file": "cover-jesus-weeping-over-jerusalem.png",
-      "aspect": "landscape",
-      "alt": "Jesus on the Mount of Olives, weeping as He looks across the valley at Jerusalem and its Temple at sunset",
-      "prompt": "Jesus of Nazareth standing on the slope of the Mount of Olives in the late afternoon, seen partly from behind and to the side, in a simple first-century robe, his face full of sorrow and tears. Across the Kidron Valley lies Jerusalem about AD 31: the great white-and-gold Temple of Herod on its platform, the city walls and towers glowing in golden sunset light. A crowd with palm branches stands quiet and puzzled behind him. Olive trees in the foreground."
-    },
-    {
-      "id": "temple",
-      "file": "herods-temple-in-morning-light.png",
-      "aspect": "landscape",
-      "alt": "Herod’s Temple in Jerusalem, white marble and gold shining in the morning sun",
-      "prompt": "The Temple of Herod in Jerusalem in the first century, viewed from the outer court: tall white marble sanctuary with gold decoration shining in early morning sun, wide stone courts, colonnades, worshippers in first-century Judean clothing walking up broad steps."
-    },
-    {
-      "id": "stones",
-      "file": "disciples-and-the-temple-stones.png",
-      "aspect": "landscape",
-      "alt": "The disciples point to the huge stones of the Temple while Jesus looks on with sadness",
-      "prompt": "Jesus and several of his disciples leaving the Temple in Jerusalem, first century. The disciples point up with admiration at the enormous, finely cut limestone blocks of the Temple walls, while Jesus looks at the building with quiet sadness. Warm afternoon light, long shadows across the stone pavement."
-    },
-    {
-      "id": "pella",
-      "file": "christians-fleeing-to-pella.png",
-      "aspect": "landscape",
-      "alt": "Christian families leave Jerusalem and walk toward the hills beyond the Jordan",
-      "prompt": "Families of early Christians in AD 66 walking away from Jerusalem along a dusty road toward distant hills: men, women, children and elderly people carrying bundles, a donkey with baggage, a mother holding a child's hand. The walls of Jerusalem are small in the background under a dramatic early morning sky. The mood is urgent but hopeful."
-    },
-    {
-      "id": "siege",
-      "file": "roman-siege-of-jerusalem.png",
-      "aspect": "landscape",
-      "alt": "Roman legions and siege works surround the walls of Jerusalem",
-      "prompt": "The Roman siege of Jerusalem in AD 70 seen from the Roman camp on a hillside: legionaries in first-century armor, wooden siege towers and earth ramps, a general on horseback studying the city, the massive walls of Jerusalem and the Temple in the distance under a heavy sky with shafts of warm light."
-    },
-    {
-      "id": "fire",
-      "file": "temple-in-flames-ad70.png",
-      "aspect": "landscape",
-      "alt": "The Temple of Jerusalem burning at night as the city falls",
-      "prompt": "The Temple of Jerusalem on fire at night in AD 70, seen from a distance across the city roofs: flames and glowing smoke rising from the sanctuary, small silhouettes of Roman soldiers on the walls, the scene solemn and sorrowful rather than violent."
-    },
-    {
-      "id": "arch",
-      "file": "arch-of-titus-relief.png",
-      "aspect": "landscape",
-      "alt": "A carved stone relief showing Roman soldiers carrying the golden lampstand from the Temple",
-      "prompt": "A weathered marble relief in the style of the Arch of Titus in Rome: Roman soldiers in procession carrying the seven-branched golden lampstand taken from the Temple of Jerusalem. Soft raking light across the carved stone."
-    },
-    {
-      "id": "bible",
-      "file": "open-bible-at-sunrise.png",
-      "aspect": "landscape",
-      "alt": "An open Bible on a wooden table by a window as the sun rises",
-      "prompt": "An old open Bible resting on a simple wooden table beside a window at sunrise, warm light falling across the pages, a pair of reading glasses and a cup nearby, peaceful and hopeful mood. The page text is soft and unreadable."
-    }
-  ],
   "sections": [
     {
       "id": "guide",
@@ -131,7 +73,7 @@
       "blocks": [
         {
           "type": "image",
-          "image": "temple",
+          "image": "ch01-temple",
           "size": "hero",
           "caption": "The Temple was the pride of Jerusalem. Its white stone and gold could be seen for miles."
         },
@@ -180,7 +122,7 @@
         },
         {
           "type": "image",
-          "image": "stones",
+          "image": "ch01-stones",
           "size": "wide",
           "caption": "The disciples admired the great stones of the Temple. Jesus saw their future."
         },
@@ -238,7 +180,7 @@
         },
         {
           "type": "image",
-          "image": "pella",
+          "image": "ch01-pella",
           "size": "wide",
           "caption": "When the Roman army pulled back, the Christians remembered the words of Jesus and left the city."
         },
@@ -261,7 +203,7 @@
         },
         {
           "type": "image",
-          "image": "siege",
+          "image": "ch01-siege",
           "size": "wide",
           "caption": "In AD 70 the Roman general Titus surrounded Jerusalem with four legions."
         },
@@ -279,7 +221,7 @@
         },
         {
           "type": "image",
-          "image": "fire",
+          "image": "ch01-fire",
           "size": "wide",
           "caption": "The Temple burned in the summer of AD 70. It has never been rebuilt."
         },
@@ -292,10 +234,6 @@
             "She sees Jerusalem as a warning to the whole world, and also as a promise: Jesus will care for those who trust Him at the end, as He did then."
           ],
           "keep": true
-        },
-        {
-          "type": "p",
-          "text": "The stones of the Temple fell. The words of Jesus did not."
         },
         {
           "type": "verse",
@@ -379,7 +317,7 @@
         },
         {
           "type": "image",
-          "image": "arch",
+          "image": "ch01-arch",
           "size": "wide",
           "caption": "The Arch of Titus: soldiers carry away the Temple’s golden lampstand."
         },
@@ -671,7 +609,7 @@
         },
         {
           "type": "image",
-          "image": "bible",
+          "image": "ch01-bible",
           "size": "wide",
           "caption": "“Thy word is a lamp unto my feet, and a light unto my path.” Psalm 119:105"
         },

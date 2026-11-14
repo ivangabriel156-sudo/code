@@ -2,3 +2,11 @@ node_modules/
 output/*/preview/
 output/*/*.html
 .env
+# Unapproved image variations and review sheets stay local; approved pictures live in assets/images/
+chapters/*/images/candidates/
+art-direction/candidates/
+output/*/review/
+# Never commit browser profiles, cookies or downloads
+.flow-profile/
+.browser-profile/
+downloads/

@@ -1,0 +1,66 @@
+{
+  "target": "characters",
+  "title": "Recurring character references",
+  "platform": "Google Flow",
+  "production": { "paused": false },
+  "characters": {
+    "jesus": {
+      "name": "Jesus of Nazareth",
+      "age": "early thirties",
+      "face": "first-century Galilean Jewish man; warm olive-brown skin; dark brown eyes; strong but gentle features; kind, thoughtful expression",
+      "hair": "dark brown, wavy, falling to the shoulders, parted naturally; short full dark beard",
+      "build": "average height, lean and strong like a working carpenter, natural proportions",
+      "clothing": "ankle-length undyed cream wool tunic with a plain woven belt; a deep russet-brown mantle draped over the left shoulder; simple leather sandals",
+      "notes": "No halo or glow. Never looking directly at the viewer in story scenes. Same face, hair, beard and clothing in every chapter.",
+      "referenceImages": ["char-jesus-portrait", "char-jesus-full-figure"]
+    }
+  },
+  "images": [
+    {
+      "id": "char-jesus-portrait",
+      "chapter": "characters",
+      "character": "jesus",
+      "title": "Jesus — reference portrait",
+      "sceneDescription": "Character reference portrait of Jesus of Nazareth: head and shoulders, three-quarter view facing slightly left, calm and compassionate expression. Plain warm neutral background with no scenery, so the face, hair, beard and clothing are clear.",
+      "historicalPeriod": "First-century Judea, about AD 31",
+      "mainCharacters": [{ "name": "Jesus", "characterRef": "jesus", "description": "the only figure" }],
+      "environment": "Plain, softly graded warm beige studio-style background.",
+      "visualStyle": "house",
+      "cameraAngle": "Eye-level head-and-shoulders portrait, 85mm lens feel, shallow depth of field.",
+      "lighting": "Soft warm key light from the upper left, gentle fill, no hard shadows.",
+      "aspectRatio": "16:9",
+      "intendedPage": "Not printed — reference image attached to later prompts",
+      "outputFilename": "jesus-reference-portrait.png",
+      "alt": "Reference portrait of Jesus",
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "char-jesus-full-figure",
+      "chapter": "characters",
+      "character": "jesus",
+      "title": "Jesus — full-figure reference",
+      "sceneDescription": "Character reference of Jesus of Nazareth standing, full figure from head to sandals, relaxed pose turned slightly to the right, hands visible at his sides. Plain warm neutral background with no scenery, so body proportions and the complete clothing are clear.",
+      "historicalPeriod": "First-century Judea, about AD 31",
+      "mainCharacters": [{ "name": "Jesus", "characterRef": "jesus", "description": "the only figure" }],
+      "environment": "Plain, softly graded warm beige studio-style background with a faint ground shadow.",
+      "visualStyle": "house",
+      "cameraAngle": "Eye-level full-length view, 50mm lens feel.",
+      "lighting": "Soft warm key light from the upper left, gentle fill, no hard shadows.",
+      "aspectRatio": "9:16",
+      "intendedPage": "Not printed — reference image attached to later prompts",
+      "outputFilename": "jesus-reference-full-figure.png",
+      "alt": "Full-figure reference of Jesus",
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    }
+  ]
+}

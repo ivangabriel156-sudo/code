@@ -24,29 +24,47 @@ export const chip = (kind) => {
   return `<div class="${cls}" data-min="12">${label}</div>`;
 };
 
-/** Illustration, or an honest placeholder when the file has not been generated yet. */
+const STATUS_TEXT = {
+  'not-started': 'Not generated yet',
+  submitted: 'Submitted — waiting for results',
+  generated: 'Generated — waiting for approval',
+  failed: 'Generation failed',
+};
+
+/**
+ * An approved illustration, or an honest placeholder. Only pictures marked "approved" in the
+ * chapter's image-manifest.json (and present in assets/images/chapter-NN/) are ever placed.
+ */
 export function imageHtml(img, ctx) {
-  if (!img) throw new Error('Block refers to an image id that is not in the chapter "images" list.');
-  if (ctx.imageExists(img.file)) {
-    return `<img src="${esc(ctx.imageUrl(img.file))}" alt="${esc(img.alt)}">`;
+  if (!img) throw new Error('A block refers to an image id that is not in the chapter image manifest.');
+  ctx.used.add(img.id);
+  if (ctx.isApproved(img)) {
+    return `<img data-image-id="${esc(img.id)}" src="${esc(ctx.imageUrl(img))}" alt="${esc(img.alt)}">`;
   }
-  ctx.missing.add(img.file);
-  return `<div class="img-placeholder" data-placeholder data-min="12">
+  ctx.missing.add(img.outputFilename);
+  const status = img.approvalStatus === 'rejected' ? 'Rejected — to be regenerated' : (STATUS_TEXT[img.generationStatus] || img.generationStatus);
+  return `<div class="img-placeholder" data-placeholder data-image-id="${esc(img.id)}" data-min="12">
     <div class="ph-label">Illustration pending</div>
     <div class="ph-desc">${esc(img.alt)}</div>
-    <div class="ph-file">${esc(img.file)}</div>
+    <div class="ph-file">${esc(img.outputFilename)}</div>
+    <div class="ph-status">${esc(status)}</div>
   </div>`;
 }
+
+/** CSS aspect-ratio value for a manifest ratio such as "16:9". */
+export const ratioCss = (img) => String(img.aspectRatio || '16:9').replace(':', ' / ');
 
 const renderers = {
   p: (b) => `<p class="block${b.lead ? ' lead' : ''}">${inline(b.text)}</p>`,
 
   heading: (b) => `<h3 class="block sub" data-keep-next>${inline(b.text)}</h3>`,
 
+  // The frame takes the picture's own aspect ratio, so the whole painting shows without cropping.
   image: (b, ctx) => {
     const img = ctx.images[b.image];
+    if (!img) throw new Error(`Image "${b.image}" is not in the chapter image manifest.`);
     return `<figure class="block illus illus--${b.size || 'wide'}">
-      ${imageHtml(img, ctx)}
+      <div class="frame" style="aspect-ratio: ${ratioCss(img)}">${imageHtml(img, ctx)}</div>
       ${b.caption ? `<figcaption data-min="14">${inline(b.caption)}</figcaption>` : ''}
     </figure>`;
   },

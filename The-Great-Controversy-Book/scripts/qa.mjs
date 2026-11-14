@@ -110,6 +110,9 @@ export async function runQa(page, { minImageDpi = 150 } = {}) {
         if (!img.complete || !img.naturalWidth) { errors.push(`${label(p)}: image failed to load: ${img.getAttribute('src')}`); continue; }
         const r = img.getBoundingClientRect();
         const dpi = Math.min(img.naturalWidth / (r.width / 96), img.naturalHeight / (r.height / 96));
+        // The frame should match the picture's shape; a mismatch means part of the painting is cut off.
+        const crop = 1 - Math.min((r.width / r.height) / (img.naturalWidth / img.naturalHeight), (img.naturalWidth / img.naturalHeight) / (r.width / r.height));
+        if (crop > 0.04) warnings.push(`${label(p)}: image ${img.getAttribute('src').split('/').pop()} is cropped by about ${Math.round(crop * 100)}% to fit its frame`);
         if (dpi < minImageDpi) warnings.push(`${label(p)}: image ${img.getAttribute('src').split('/').pop()} prints at about ${Math.round(dpi)} dpi (target ${minImageDpi}+)`);
       }
     }

@@ -1,0 +1,40 @@
+{
+  "target": "characters",
+  "generatedAt": "2026-11-14T16:58:48.264Z",
+  "paused": false,
+  "totals": {
+    "required": 2,
+    "generated": 0,
+    "approved": 0,
+    "pending": 2,
+    "rejected": 0,
+    "missingFiles": 0,
+    "failedGenerations": 0
+  },
+  "images": [
+    {
+      "id": "char-jesus-portrait",
+      "title": "Jesus — reference portrait",
+      "file": "jesus-reference-portrait.png",
+      "intendedPage": "Not printed — reference image attached to later prompts",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    },
+    {
+      "id": "char-jesus-full-figure",
+      "title": "Jesus — full-figure reference",
+      "file": "jesus-reference-full-figure.png",
+      "intendedPage": "Not printed — reference image attached to later prompts",
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": 0,
+      "approvedFileMissing": false,
+      "missingCandidates": []
+    }
+  ]
+}

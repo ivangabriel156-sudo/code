@@ -1,0 +1,261 @@
+{
+  "target": "chapter-01",
+  "chapter": 1,
+  "title": "Destruction of Jerusalem",
+  "platform": "Google Flow",
+  "production": {
+    "paused": false
+  },
+  "images": [
+    {
+      "id": "ch01-cover",
+      "chapter": 1,
+      "title": "Jesus weeping over Jerusalem",
+      "sceneDescription": "Jesus stands on the western slope of the Mount of Olives and weeps as he looks across the Kidron Valley at Jerusalem. He is seen from the side and slightly behind, one hand half raised toward the city, tears on his face. Behind him a crowd that had been rejoicing with palm branches has fallen silent and puzzled. The Temple of Herod dominates the city on its great platform.",
+      "historicalPeriod": "First-century Judea, about AD 31, the week before the crucifixion",
+      "mainCharacters": [
+        {
+          "name": "Jesus",
+          "characterRef": "jesus",
+          "description": "left of centre in the foreground, the focal point, grieving"
+        },
+        {
+          "name": "Crowd of disciples and pilgrims",
+          "description": "men, women and children in Judean dress holding palm branches, in the middle ground behind him, slightly out of focus"
+        }
+      ],
+      "environment": "Rocky hillside with old olive trees in the foreground; the Kidron Valley below; Jerusalem's limestone walls, towers and flat roofs beyond; the white-and-gold Temple catching the light. Clear spring evening.",
+      "visualStyle": "house",
+      "cameraAngle": "Wide establishing shot from just behind and beside Jesus at shoulder height, looking west over the valley; city fills the right two-thirds.",
+      "lighting": "golden-hour",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 1 · chapter cover",
+      "outputFilename": "cover-jesus-weeping-over-jerusalem.png",
+      "alt": "Jesus on the Mount of Olives, weeping as He looks across the valley at Jerusalem and its Temple at sunset",
+      "historicalNotes": [
+        "first-century-judea"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-temple",
+      "chapter": 1,
+      "title": "Herod's Temple in the morning",
+      "sceneDescription": "The Temple of Herod seen from its outer court early in the day: the tall sanctuary of white marble with gold ornament rising above wide paved courts and long colonnades, worshippers climbing broad steps toward it.",
+      "historicalPeriod": "First-century Judea, about AD 31",
+      "mainCharacters": [
+        {
+          "name": "Worshippers",
+          "description": "small groups of Judean men, women and children in tunics and mantles, seen at a distance for scale"
+        }
+      ],
+      "environment": "Vast limestone-paved court on the Temple Mount, colonnades with tall columns at the sides, the sanctuary facade at the centre, clear sky.",
+      "visualStyle": "house",
+      "cameraAngle": "Low wide-angle view from the court looking up at the sanctuary, strong central symmetry.",
+      "lighting": "morning",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 3 · The Story",
+      "outputFilename": "herods-temple-morning.png",
+      "alt": "Herod’s Temple in Jerusalem, white marble and gold shining in the morning sun",
+      "historicalNotes": [
+        "first-century-judea"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-stones",
+      "chapter": 1,
+      "title": "The disciples and the Temple stones",
+      "sceneDescription": "Jesus and four of his disciples are leaving the Temple. The disciples look up and point with admiration at the enormous, finely cut limestone blocks of the Temple wall. Jesus looks at the same stones with quiet sadness.",
+      "historicalPeriod": "First-century Judea, about AD 31",
+      "mainCharacters": [
+        {
+          "name": "Jesus",
+          "characterRef": "jesus",
+          "description": "standing slightly apart at the right, looking up at the wall, sorrowful"
+        },
+        {
+          "name": "Four disciples",
+          "description": "Galilean men aged twenty to forty in plain tunics and mantles, pointing upward, impressed"
+        }
+      ],
+      "environment": "Stone-paved street at the foot of the towering Temple wall, blocks taller than a man, a gateway arch behind, other pilgrims in the distance.",
+      "visualStyle": "house",
+      "cameraAngle": "Medium-wide shot from street level looking slightly upward so the wall towers over the figures.",
+      "lighting": "golden-hour",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 5 · The Story",
+      "outputFilename": "disciples-and-temple-stones.png",
+      "alt": "The disciples point to the huge stones of the Temple while Jesus looks on with sadness",
+      "historicalNotes": [
+        "first-century-judea"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-pella",
+      "chapter": 1,
+      "title": "Christians fleeing to Pella",
+      "sceneDescription": "Families of early Christians leave Jerusalem on foot, walking away from the city along a dusty road toward distant hills. They carry bundles; a donkey is loaded with baggage; a mother holds a child's hand; an old man leans on a staff. The mood is urgent but hopeful.",
+      "historicalPeriod": "Roman Judea, AD 66",
+      "mainCharacters": [
+        {
+          "name": "Christian families",
+          "description": "about a dozen men, women, children and elderly people in Judean dress, walking toward the viewer's right"
+        }
+      ],
+      "environment": "Dry hill road east of Jerusalem with scrub and stones; the city walls small on the horizon behind them; open country ahead.",
+      "visualStyle": "house",
+      "cameraAngle": "Wide shot from the roadside at eye level, travellers moving diagonally from background left to foreground right.",
+      "lighting": "morning",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 8 · The Story",
+      "outputFilename": "christians-fleeing-to-pella.png",
+      "alt": "Christian families leave Jerusalem and walk toward the hills beyond the Jordan",
+      "historicalNotes": [
+        "first-century-judea"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-siege",
+      "chapter": 1,
+      "title": "The Roman siege of Jerusalem",
+      "sceneDescription": "The Roman army besieges Jerusalem. From a hillside camp, a Roman general on horseback studies the city while legionaries stand in ranks. Timber siege towers and earth ramps press against the massive walls in the distance; the Temple still stands.",
+      "historicalPeriod": "Roman Judea, spring AD 70",
+      "mainCharacters": [
+        {
+          "name": "Titus, Roman general",
+          "description": "man of about thirty on horseback in a general's cuirass and red cloak, seen from behind and to the side"
+        },
+        {
+          "name": "Legionaries",
+          "description": "ranks of soldiers with rectangular shields and standards"
+        }
+      ],
+      "environment": "Roman camp on high ground with leather tents and palisade; valley between; the walls and towers of Jerusalem and the Temple platform beyond; thin smoke rising.",
+      "visualStyle": "house",
+      "cameraAngle": "Wide over-the-shoulder shot from behind the general, city in the distance across the valley.",
+      "lighting": "overcast-drama",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 9 · The Story",
+      "outputFilename": "roman-siege-of-jerusalem.png",
+      "alt": "Roman legions and siege works surround the walls of Jerusalem",
+      "historicalNotes": [
+        "first-century-judea",
+        "roman-army-first-century"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-fire",
+      "chapter": 1,
+      "title": "The Temple burning",
+      "sceneDescription": "The Temple of Jerusalem burns at night as the city falls. Flames and glowing smoke rise from the sanctuary; tiny silhouettes of soldiers stand on the walls. Solemn and sorrowful rather than violent; no bodies shown.",
+      "historicalPeriod": "Roman Judea, summer AD 70",
+      "mainCharacters": [
+        {
+          "name": "Distant silhouettes",
+          "description": "small figures of Roman soldiers on the walls, no faces visible"
+        }
+      ],
+      "environment": "Rooftops of Jerusalem in the dark foreground, the Temple platform beyond with the sanctuary on fire, sparks and smoke drifting across the night sky.",
+      "visualStyle": "house",
+      "cameraAngle": "Long shot from a rooftop across the city toward the Temple, slightly elevated.",
+      "lighting": "night-fire",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 10 · The Story",
+      "outputFilename": "temple-burning-ad70.png",
+      "alt": "The Temple of Jerusalem burning at night as the city falls",
+      "historicalNotes": [
+        "first-century-judea",
+        "roman-army-first-century"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-arch",
+      "chapter": 1,
+      "title": "Arch of Titus relief",
+      "sceneDescription": "A weathered marble relief in the manner of the spoils panel of the Arch of Titus in Rome: Roman soldiers in procession carrying the seven-branched golden lampstand taken from the Temple of Jerusalem. The carving is worn smooth with age.",
+      "historicalPeriod": "Roman relief carved about AD 81, shown as it looks today",
+      "mainCharacters": [
+        {
+          "name": "Carved figures",
+          "description": "stone relief figures of soldiers wearing laurel wreaths, carrying the lampstand on poles"
+        }
+      ],
+      "environment": "Close view of the carved marble panel only; no modern surroundings, visitors or signs.",
+      "visualStyle": "house",
+      "cameraAngle": "Straight-on medium close-up of the relief, filling the frame.",
+      "lighting": "museum-raking",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 14 · Historical Background",
+      "outputFilename": "arch-of-titus-relief.png",
+      "alt": "A carved stone relief showing Roman soldiers carrying the golden lampstand from the Temple",
+      "historicalNotes": [],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    },
+    {
+      "id": "ch01-bible",
+      "chapter": 1,
+      "title": "Open Bible at sunrise",
+      "sceneDescription": "An old leather-bound Bible lies open on a simple wooden table beside a window at sunrise. Reading glasses and a plain cup rest nearby. The printed words on the pages are soft and unreadable. Peaceful, hopeful, inviting.",
+      "historicalPeriod": "Timeless present-day devotional still life (the one scene in this chapter that is not ancient)",
+      "mainCharacters": [],
+      "environment": "Quiet room, worn wooden table, linen curtain, soft view of morning sky through the window.",
+      "visualStyle": "house",
+      "cameraAngle": "Three-quarter view from slightly above the table, shallow depth of field.",
+      "lighting": "interior-window",
+      "aspectRatio": "16:9",
+      "intendedPage": "Page 25 · Personal Application",
+      "outputFilename": "open-bible-at-sunrise.png",
+      "alt": "An open Bible on a wooden table by a window as the sun rises",
+      "historicalNotes": [],
+      "allow": [
+        "A printed, bound book, reading glasses and a cup are correct in this scene"
+      ],
+      "promptNotes": [],
+      "generationStatus": "not-started",
+      "approvalStatus": "pending",
+      "round": 0,
+      "candidates": [],
+      "history": []
+    }
+  ]
+}

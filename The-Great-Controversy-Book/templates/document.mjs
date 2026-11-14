@@ -1,17 +1,21 @@
 // Assembles one chapter into a single HTML document.
 // The <div id="source"> holds un-paginated sections; templates/paginate.js lays them out on A4 pages.
-import { esc, inline, renderBlock, sectionHead, imageHtml } from './blocks.mjs';
+import { esc, inline, renderBlock, sectionHead, imageHtml, ratioCss } from './blocks.mjs';
 
-/** Template A — chapter cover. */
+/** Template A — chapter cover (kicker, chapter number and title above a wide painting, as in the reference). */
 function coverHtml(ch, book, ctx) {
   const c = ch.cover;
+  const img = ctx.images[c.image];
+  if (!img) throw new Error(`Cover image "${c.image}" is not in the chapter image manifest.`);
   return `<section data-template="cover">
-    <div class="cover-art">${imageHtml(ctx.images[c.image], ctx)}</div>
-    <div class="cover-band"></div>
-    <div class="cover-text">
+    <div class="cover-top">
+      ${book.coverKicker ? `<div class="cover-kicker" data-min="12">${esc(book.coverKicker)}</div><div class="cover-rule"></div>` : ''}
       <div class="cover-chapter">Chapter ${ch.number}</div>
       <h1 class="cover-title">${inline(ch.title)}</h1>
       <div class="ornament" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="cover-art" style="aspect-ratio: ${ratioCss(img)}">${imageHtml(img, ctx)}</div>
+    <div class="cover-text">
       <p class="cover-subtitle">${inline(c.subtitle)}</p>
       ${c.verse ? `<div class="cover-verse">“${inline(c.verse.text)}”<b>${esc(c.verse.ref)}</b></div>` : ''}
     </div>

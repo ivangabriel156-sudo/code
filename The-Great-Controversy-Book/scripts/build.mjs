@@ -11,6 +11,7 @@ import { pathToFileURL } from 'node:url';
 import { ROOT, chapterSlug, chapterDir, loadBook, loadChapter, parseArgs } from './lib.mjs';
 import { documentHtml } from '../templates/document.mjs';
 import { runQa } from './qa.mjs';
+import { resolveTarget, loadManifest, saveManifest, isApproved, approvedPath } from './image-lib.mjs';
 
 const { chromium } = createRequire(import.meta.url)('playwright');
 
@@ -24,11 +25,15 @@ const outDir = path.join(ROOT, 'output', slug);
 fs.mkdirSync(outDir, { recursive: true });
 
 // ---- 1. Render HTML ---------------------------------------------------------
+// Illustrations come from the chapter's image manifest; only approved ones are placed.
+const target = resolveTarget(String(n));
+const manifest = loadManifest(target);
 const ctx = {
-  images: Object.fromEntries((ch.images || []).map((i) => [i.id, i])),
+  images: Object.fromEntries(manifest.images.map((i) => [i.id, i])),
   missing: new Set(),
-  imageExists: (file) => fs.existsSync(path.join(imgDir, file)),
-  imageUrl: (file) => path.relative(outDir, path.join(imgDir, file)).split(path.sep).join('/'),
+  used: new Set(),
+  isApproved: (img) => isApproved(target, img),
+  imageUrl: (img) => path.relative(outDir, approvedPath(target, img)).split(path.sep).join('/'),
   readSvg: (file) => fs.readFileSync(path.join(imgDir, file), 'utf8').replace(/<\?xml[^>]*\?>/, ''),
 };
 const html = documentHtml(ch, book, ctx, {
@@ -40,11 +45,14 @@ const html = documentHtml(ch, book, ctx, {
 const htmlFile = path.join(outDir, `${slug}.html`);
 fs.writeFileSync(htmlFile, html);
 
+const unplanned = manifest.images.filter((i) => !ctx.used.has(i.id)).map((i) => i.id);
+if (unplanned.length) console.log(`  ! In the image manifest but not placed on any page: ${unplanned.join(', ')}`);
+
 if (ctx.missing.size && !draft) {
-  console.error(`\n✖ ${ctx.missing.size} illustration(s) have not been generated:\n` +
-    [...ctx.missing].map((f) => `    chapters/${slug}/images/${f}`).join('\n') +
-    `\n\n  Run  npm run images -- ${n}  (needs an image-generation API key — see README),` +
-    `\n  or build a proof with placeholders:  npm run build -- ${n} --draft\n`);
+  console.error(`\n✖ ${ctx.missing.size} illustration(s) are not approved yet, so the final PDF cannot be built:\n` +
+    [...ctx.missing].map((f) => `    ${f}`).join('\n') +
+    `\n\n  See what is outstanding:   npm run images -- status ${n}` +
+    `\n  Build a proof instead:     npm run build -- ${n} --draft\n`);
   process.exit(1);
 }
 
@@ -57,6 +65,21 @@ try {
   await page.waitForFunction('window.__paginated === true', null, { timeout: 60_000 });
 
   const qa = await runQa(page);
+
+  // Record on which page each illustration landed, and confirm every approved picture was inserted.
+  const placed = await page.evaluate(() => [...document.querySelectorAll('[data-image-id]')].map((el) => ({
+    id: el.dataset.imageId, page: el.closest('.page').dataset.page, section: el.closest('.page').dataset.sections,
+    placeholder: el.hasAttribute('data-placeholder'),
+  })));
+  let manifestChanged = false;
+  for (const img of manifest.images) {
+    const where = placed.find((x) => x.id === img.id);
+    if (!where) { if (ctx.used.has(img.id)) qa.errors.push(`Illustration ${img.id} was not placed on any page`); continue; }
+    if (!draft && where.placeholder) qa.errors.push(`Illustration ${img.id} is still a placeholder on page ${where.page}`);
+    const label = where.section === 'cover' ? `Page ${where.page} · chapter cover` : `Page ${where.page} · ${ch.sections.find((x) => x.id === where.section.split(' ')[0])?.title || where.section}`;
+    if (img.intendedPage !== label) { img.intendedPage = label; manifestChanged = true; }
+  }
+  if (manifestChanged) saveManifest(target, manifest);
   fs.writeFileSync(path.join(outDir, 'qa-report.json'), JSON.stringify({ chapter: n, draft, ...qa }, null, 2));
 
   console.log(`\nChapter ${n}: ${ch.title} — ${qa.stats.pages} pages, smallest text ${qa.stats.smallestTextPt}pt`);
@@ -71,6 +94,8 @@ try {
     const pdfFile = path.join(outDir, `${slug}${draft ? '-DRAFT' : ''}.pdf`);
     await page.pdf({ path: pdfFile, width: '210mm', height: '297mm', printBackground: true, preferCSSPageSize: true });
     console.log(`  ✔ Quality control passed\n  ✔ ${path.relative(ROOT, pdfFile)}`);
+    // A final PDF supersedes any earlier proof.
+    if (!draft) fs.rmSync(path.join(outDir, `${slug}-DRAFT.pdf`), { force: true });
 
     if (flags.has('--preview')) {
       const prevDir = path.join(outDir, 'preview');
